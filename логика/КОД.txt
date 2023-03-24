@@ -1,0 +1,17 @@
+let calorazh;
+
+let gender = 'man';
+let weight = 86;
+let height = 180;
+let age = 26;
+
+if (gender == 'man') {
+  calorazh = 88.36 + (13.4 * weight) + (4.8 * height) - ( 5.7 * age);
+} else if (gender == 'woman') {
+  calorazh = 447.6 + (9.2 * weight) + (3.1 * height) - (4.3 * age);
+} else {
+  console.log('Выбери корректный гендер');
+}
+
+
+console.log(Math.floor(calorazh));
