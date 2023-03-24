@@ -11,3 +11,9 @@ for (let i = 0; i < switches.length; i++) {
         infos[i].classList.add('activeInfo');
     })
 }
+
+
+let countButton = document.querySelector('.countButton');
+countButton.onclick = function(event) {
+    event.preventDefault()
+}
