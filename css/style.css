@@ -42,6 +42,7 @@ body {
 
     background-color: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(2px);
+    border-radius: 8px;
 }
 
 .infoBox p {
@@ -105,7 +106,8 @@ body {
     width: 64%;
 
     background-color: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(2px);    
+    backdrop-filter: blur(2px);
+    border-radius: 8px;    
 }
 
 .countBoxTitle {
@@ -119,6 +121,7 @@ body {
 .formParRadio {
     margin: 40px 28px;
     position: relative;
+    cursor: default;
 }
 
 .radioBox {
@@ -128,16 +131,38 @@ body {
 }
 
 .radioBox input {
-    margin-right: 6px;
-    z-index: -1;                                    /*Скрываю стандартные радио -кружки*/
-    opacity: 0;                                         /*Тоже скрываю*/
+    margin-right: 2px;
+    cursor: default;
+    opacity: -1;
+}
+.radioBox label {
+    cursor: default;
+}
+.radioBox label::before {                    /* Здесь делаю новй значек для радио */
+    content: "";
+	display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(145, 144, 144, 0.3);
+	position: relative;
+	right: 16px;
+	bottom: 1px;
+    z-index: 5;
+}
+
+.radioBox label:hover {
+    text-shadow: 3px 3px 8px;
+    font-weight: bold;
 }
 
 .radioBox input:not(:first-child) {
     margin-left: 38px;
 }
 
-
+.radioBox input:checked + label:before {
+    background-color: rgb(247, 247, 247);
+}
 
 
 .formPar {
@@ -156,6 +181,13 @@ body {
     border: 1px solid rgba(170, 169, 169, 0.5);
     border-radius: 6px;
     padding: 4px;
+    cursor: default;
+    width: 60%;
+}
+
+.formPar input:hover {
+    background-color: rgba(170, 169, 169, 0.3);
+    box-shadow: 2px -2px 10px;
 }
 
 .countButton {
@@ -165,6 +197,7 @@ body {
     padding: 10px 20px;
     border-radius: 30px;
     font-weight: bold;
+    cursor: default;
 }
 
 .countButton:hover {

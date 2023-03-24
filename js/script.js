@@ -17,3 +17,6 @@ let countButton = document.querySelector('.countButton');
 countButton.onclick = function(event) {
     event.preventDefault()
 }
+
+
+let genderMale = document.getElementById('genderMale');
