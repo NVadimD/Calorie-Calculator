@@ -113,7 +113,7 @@ body {
 }
 
 .countBoxTitle {
-    margin: 20px auto 60px;
+    margin: 20px auto 10px;
     font-size: 30px;
     text-align: center;
 }
@@ -121,7 +121,7 @@ body {
 
 
 .formParRadio {
-    margin: 40px 28px;
+    margin: 16px 28px;
     position: relative;
     cursor: default;
 }
@@ -166,6 +166,19 @@ body {
     background-color: rgb(247, 247, 247);
 }
 
+input[type=range] {
+    -webkit-appearance: none;    
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(145, 144, 144, 0.3);
+}
+
+
 
 .formPar {
     margin: 40px 28px;
@@ -193,7 +206,7 @@ body {
 }
 
 .countButton {
-    margin: 62px auto 0px;
+    margin: 42px auto 0px;
     display: block;
     border: 2px solid #BABABA;
     padding: 10px 20px;

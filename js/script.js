@@ -29,6 +29,11 @@ const gender = document.querySelectorAll('input[name="gender"]');
 let weight = document.querySelector('input[name="weight"]');
 let height = document.querySelector('input[name="height"]');
 let age = document.querySelector('input[name="age"]');
+let active = document.querySelector('input[name="active"]')
+
+active.onchange = function() {
+    console.log(this.value);
+}
 
 
 let calculation = {
