@@ -34,29 +34,31 @@
             </div>
             <div class="countBox">
                 <h3 class="countBoxTitle">Узнай свою ежедневную норму</h3>
-                <form class="form" action="/" method="post">
-                    <div class="formParRadio"> Укажите ваш пол
-                        <div class="radioBox">
-                            <input type="radio" name="gender" value="male" id="genderMale"><label for="genderMale">Мужской</label>
-                            <input type="radio" name="gender" value="female" id="genderFemale"><label for="genderFemale">Женский</label>
+                <div class="countDisp">
+                    <form class="form" action="/" method="post">
+                        <div class="formParRadio"> Укажите ваш пол
+                            <div class="radioBox">
+                                <input type="radio" name="gender" value="male" id="genderMale"><label for="genderMale">Мужской</label>
+                                <input type="radio" name="gender" value="female" id="genderFemale"><label for="genderFemale">Женский</label>
+                            </div>
                         </div>
-                    </div>
-                    <p class="formPar">
-                        <label for="weight">Укажите ваш вес (в кг)</label>
-                        <input type="text" name="weight" id="weight" placeholder="70" autocomplete="off">
-                    </p>
-                    <p class="formPar">
-                        <label for="height">Укажите ваш рост (в см)</label>
-                        <input type="text" name="height" id="height" placeholder="175" autocomplete="off">
-                    </p>
-                    <p class="formPar">
-                        <label for="age">Укажите ваш возраст</label>
-                        <input type="text" name="age" id="age" placeholder='31' autocomplete="off">
-                    </p>
-                </form>
-
-                    <button class="countButton">Рассчитать суточный калораж</button>
-                    <div class="comment"></div>
+                        <p class="formPar">
+                            <label for="weight">Укажите ваш вес (в кг)</label>
+                            <input type="text" name="weight" id="weight" placeholder="70" autocomplete="off">
+                        </p>
+                        <p class="formPar">
+                            <label for="height">Укажите ваш рост (в см)</label>
+                            <input type="text" name="height" id="height" placeholder="175" autocomplete="off">
+                        </p>
+                        <p class="formPar">
+                            <label for="age">Укажите ваш возраст</label>
+                            <input type="text" name="age" id="age" placeholder='31' autocomplete="off">
+                        </p>
+                    </form>
+    
+                        <button class="countButton">Рассчитать суточный калораж</button>
+                        <div class="comment"></div>
+                </div>
             </div>
         </div>
     </main>
