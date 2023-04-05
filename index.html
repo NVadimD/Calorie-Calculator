@@ -34,6 +34,20 @@
             </div>
             <div class="countBox">
                 <h3 class="countBoxTitle">Узнай свою ежедневную норму</h3>
+                <div class="infoActive">
+                    <p class="infoActiveNumber">
+                        3 - Для людей с низкой активностью, легкие тренировки 1-3 раза в неделю или в виде эквивалента другой активности.
+                    </p>
+                    <p class="infoActiveNumber">
+                        5 - Для умеренно активных людей: физическая работа средней тяжести или регулярные тренировки 3-5 дней в неделю.
+                    </p>
+                    <p class="infoActiveNumber">
+                        7 - Для очень активных людей: физическая работа полный день или интенсивные тренировки 6-7 раз в неделю.
+                    </p>
+                    <p class="infoActiveNumber">
+                        9 - Для предельно активных людей: тяжелая физическая работа и интенсивные тренировки/занятия спортом.
+                    </p>
+                </div>
                 <div class="countDisp">
                     <form class="form" action="/" method="post">
                         <div class="formParRadio"> Укажите ваш пол
@@ -54,10 +68,11 @@
                             <label for="age">Укажите ваш возраст</label>
                             <input type="text" name="age" id="age" placeholder='31' autocomplete="off">
                         </p>
-                        <p class="formPar">
+                        <p class="formParRange">
                             <label for="active">Физическая активность</label>
-                            <input type="range" name="active" id="active" max="10" list="active" value="0">                        
+                            <input class="inputRage" type="range" name="active" id="active" max="10" list="active" value="0">                       
                         </p>
+                        <div class="activeValue"></div> 
                     </form>
     
                         <button class="countButton">Рассчитать суточный калораж</button>

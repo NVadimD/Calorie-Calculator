@@ -13,8 +13,16 @@ for (let i = 0; i < switches.length; i++) {
 }
 
 
+//-----------------------------------------------Настраиваю ползунок физ активности---------------------------------------
 
+let activeValue = document.querySelector('.activeValue');
+let inputRage = document.querySelector('.inputRage');
 
+activeValue.innerHTML = inputRage.value;
+
+inputRage.onchange = function () {
+    activeValue.innerHTML = inputRage.value;
+}
 
 //-----------------------------------------------Расчет калорий на день---------------------------------------------------
 
@@ -29,12 +37,6 @@ const gender = document.querySelectorAll('input[name="gender"]');
 let weight = document.querySelector('input[name="weight"]');
 let height = document.querySelector('input[name="height"]');
 let age = document.querySelector('input[name="age"]');
-let active = document.querySelector('input[name="active"]')
-
-active.onchange = function() {
-    console.log(this.value);
-}
-
 
 let calculation = {
     yourGender: undefined,
@@ -119,3 +121,14 @@ countButton.addEventListener ('click', function () {
 })
 
 
+
+
+
+let infoActive = document.querySelector('.infoActive');
+
+activeValue.onmouseover = function () {
+    infoActive.style.display = 'block';
+}
+activeValue.onmouseout = function () {
+    infoActive.style.display = 'none';
+}
