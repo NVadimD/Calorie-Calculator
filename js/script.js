@@ -53,7 +53,7 @@ let calculation = {
                 this.checkWeight();
                 return true;
             }
-          }
+        }
         if (this.yourGender === undefined) {
             displayMessage('Вы не выбрали пол!');
             return false;
@@ -102,11 +102,11 @@ let calculation = {
     calculateCalories: function () {
         if (this.yourGender === 'male') {
             this.calorazh = 88.36 + (13.4 * this.yourWeight) + (4.8 * this.yourHeight) - ( 5.7 * this.yourAge);
-          } else if (this.yourGender === 'female') {
+        } else if (this.yourGender === 'female') {
             this.calorazh = 447.6 + (9.2 * this.yourWeight) + (3.1 * this.yourHeight) - (4.3 * this.yourAge);
-          }          
-          
-         displayMessage(`Ваша дневная норма калорий в состоянии покоя - ${Math.floor(this.calorazh)}`);
+        }          
+        
+        displayMessage(`Ваша дневная норма калорий в состоянии покоя - ${Math.floor(this.calorazh)}`);
     }
 
 }
