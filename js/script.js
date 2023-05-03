@@ -34,6 +34,8 @@ function displayMessage (message) {
     comment.innerHTML = message;
 }
 
+let activeBox = document.querySelector('.wrapper_activeBox');
+let bmr = document.querySelector('.yourBMR span');
 
 const gender = document.querySelectorAll('input[name="gender"]');
 let weight = document.querySelector('input[name="weight"]');
@@ -46,6 +48,8 @@ let calculation = {
     yourHeight: undefined,
     yourAge: undefined,
     calorazh: undefined,
+    coef: undefined,
+    activeCalorazh: undefined,
     
     checkGender: function () {
         for (const g of gender) {
@@ -103,34 +107,53 @@ let calculation = {
 
     calculateCalories: function () {
         if (this.yourGender === 'male') {
-            this.calorazh = (10 * this.yourWeight) + (6.25 * this.yourHeight) - ( 5 * this.yourAge) + 5;
+            this.calorazh = Math.floor((10 * this.yourWeight) + (6.25 * this.yourHeight) - ( 5 * this.yourAge) + 5);
         } else if (this.yourGender === 'female') {
-            this.calorazh = (10 * this.yourWeight) + (6.25 * this.yourHeight) - (5 * this.yourAge) - 161;
+            this.calorazh = Math.floor((10 * this.yourWeight) + (6.25 * this.yourHeight) - (5 * this.yourAge) - 161);
         }          
-        
-        displayMessage(`Ваша дневная норма калорий в состоянии покоя - ${Math.floor(this.calorazh)}`);
+        this.showActiveBox();
+    },
+
+    showActiveBox: function () {
+        bmr.innerHTML = `${this.calorazh} ccal`;
+        activeBox.classList.remove('hide');
+        window.scroll ({
+            top: activeBox.offsetTop - 24,
+            behavior: "smooth"
+        })
+    },
+
+    checkActive: function () {
+        if (inputRage.value == 0) {
+            console.log('xyu');
+        } else {
+            this.coef = 1 + (Number(inputRage.value) / 10);
+            this.calculateActiveCalories();
+        }
+    },
+
+    calculateActiveCalories: function () {
+        this.activeCalorazh = this.calorazh * this.coef;
+        console.log(this.activeCalorazh);
     }
 
 }
 
 
-let countButton = document.querySelector('.countButton');
+// ----------------------------------------Запускаем процесс расчета по нажатию на кнопку----------------------------------
 
+let countButton1 = document.querySelector('.wrapper_startBox .countButton');
 
-
-countButton.addEventListener ('click', function () {
+countButton1.addEventListener ('click', function () {
     calculation.checkGender();
 })
 
 
 
+let countButton2 = document.querySelector('.wrapper_activeBox .countButton');
+
+countButton2.addEventListener ('click', function () {
+    calculation.checkActive();
+})
 
 
-let infoActive = document.querySelector('.infoActive');
-
-activeValue.onmouseover = function () {
-    infoActive.style.display = 'block';
-}
-activeValue.onmouseout = function () {
-    infoActive.style.display = 'none';
-}

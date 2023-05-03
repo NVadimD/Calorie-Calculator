@@ -34,20 +34,6 @@
             </div>
             <div class="countBox">
                 <h3 class="countBoxTitle">Узнай свою ежедневную норму</h3>
-                <div class="infoActive">
-                    <p class="infoActiveNumber">
-                        3 - Для людей с низкой активностью, легкие тренировки 1-3 раза в неделю или в виде эквивалента другой активности.
-                    </p>
-                    <p class="infoActiveNumber">
-                        5 - Для умеренно активных людей: физическая работа средней тяжести или регулярные тренировки 3-5 дней в неделю.
-                    </p>
-                    <p class="infoActiveNumber">
-                        7 - Для очень активных людей: физическая работа полный день или интенсивные тренировки 6-7 раз в неделю.
-                    </p>
-                    <p class="infoActiveNumber">
-                        9 - Для предельно активных людей: тяжелая физическая работа и интенсивные тренировки/занятия спортом.
-                    </p>
-                </div>
                 <div class="countDisp">
                     <form class="form" action="/" method="post">
                         <div class="formParRadio"> Укажите ваш пол
@@ -68,24 +54,43 @@
                             <label for="age">Укажите ваш возраст</label>
                             <input type="text" name="age" id="age" placeholder='31' autocomplete="off">
                         </p>
-                        <!-- <p class="formParRange">
-                            <label for="active">Физическая активность</label>
-                            <input class="inputRage" type="range" name="active" id="active" max="10" list="active" value="0">                       
-                        </p>
-                        <div class="activeValue"></div>  -->
                     </form>
     
-                        <button class="countButton">Рассчитать суточный калораж</button>
+                        <button class="countButton">Рассчитать калораж</button>
                         <div class="comment"></div>
                 </div>
             </div>
         </div>
         <div class="wrapper_activeBox hide">
-            <p class="formParRange">
+            <p>Отлично! Мы рассчитали ваш базовый метаболизм (basal metabolic rate) Это показатель, определяющий, сколько конкретный человек тратит энергии для поддержания жизнедеятельности в пассивном состоянии.</p>
+            <p class="yourBMR">Ваш BMR = <span>2000 ccal</span></p>
+            <p> Для финального расчета необходимо понять сколько вы тратите энергии в течение дня с учетом всей вашей физической и умственной активности. Для этого выставьте селектор физической активности в соответствии с вашем образом жизни: </p>
+            <div class="formParRange">
                 <label for="active">Физическая активность</label>
-                <input class="inputRage" type="range" name="active" id="active" max="10" list="active" value="0">                       
-            </p>
-            <div class="activeValue"></div>
+                <input class="inputRage" type="range" name="active" id="active" max="10" list="active" value="0">
+                <div class="activeValue"></div>                       
+            </div>
+            <div class="exampleDesk">
+                <p>
+                    Примеры сопоставления физической активности с коэффициентом:
+                </p>
+                <p>
+                    1-2 — практически полное отсутствие активности. Сюда относятся люди с сидячим образом жизни, не занимающиеся спортом.
+                </p>
+                <p>
+                    3-4 — слабая активность. Это либо сидячий образ жизни в купе с небольшими тренировками 1-3 раза в неделю, либо занятия, требующие регулярной длительной ходьбы.
+                </p>
+                <p>
+                    5-6 — средняя активность. Эти коэффициенты выбирают те, кто занимается спортом 3-4 раза в неделю по 30-60 минут, имеют подвижную работу или много ходят пешком.
+                </p>
+                <p>
+                    7-8 — высокая активность. Это ежедневные или практически ежедневные тренировки, либо занятость в сфере строительства, сельского хозяйства и т.д.
+                </p>
+                <p>
+                    9-10 — экстремальная активность. Сюда относятся спортсмены с ежедневными многоразовыми тренировками и люди с длительным рабочим днем, например, в угольных шахтах.
+                </p>                
+            </div>
+            <button class="countButton">Рассчитать калораж</button>
         </div>
         <div class="wrapper_finalBox hide">
 
