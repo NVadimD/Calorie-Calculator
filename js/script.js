@@ -1,3 +1,5 @@
+//-----------------------------------------------Переключение окошек информации---------------------------------------
+
 let switches = Array.from(document.querySelectorAll('.switch'));
 let infos = Array.from(document.querySelectorAll('.info'));
 
@@ -101,9 +103,9 @@ let calculation = {
 
     calculateCalories: function () {
         if (this.yourGender === 'male') {
-            this.calorazh = 88.36 + (13.4 * this.yourWeight) + (4.8 * this.yourHeight) - ( 5.7 * this.yourAge);
+            this.calorazh = (10 * this.yourWeight) + (6.25 * this.yourHeight) - ( 5 * this.yourAge) + 5;
         } else if (this.yourGender === 'female') {
-            this.calorazh = 447.6 + (9.2 * this.yourWeight) + (3.1 * this.yourHeight) - (4.3 * this.yourAge);
+            this.calorazh = (10 * this.yourWeight) + (6.25 * this.yourHeight) - (5 * this.yourAge) - 161;
         }          
         
         displayMessage(`Ваша дневная норма калорий в состоянии покоя - ${Math.floor(this.calorazh)}`);
