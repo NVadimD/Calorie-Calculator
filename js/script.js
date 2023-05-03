@@ -28,10 +28,11 @@ inputRage.onchange = function () {
 
 //-----------------------------------------------Расчет калорий на день---------------------------------------------------
 
-let comment = document.querySelector('.comment');
+let comment1 = document.querySelector('.countBox .comment');
+let comment2 = document.querySelector('.wrapper_activeBox .comment');
 
 function displayMessage (message) {
-    comment.innerHTML = message;
+    comment1.innerHTML = message;
 }
 
 let activeBox = document.querySelector('.wrapper_activeBox');
@@ -125,8 +126,9 @@ let calculation = {
 
     checkActive: function () {
         if (inputRage.value == 0) {
-            console.log('xyu');
+            comment2.innerHTML = 'Выставите уровень вашей физической активности (от 1 до 10)'
         } else {
+            comment2.innerHTML = '';
             this.coef = 1 + (Number(inputRage.value) / 10);
             this.calculateActiveCalories();
         }

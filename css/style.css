@@ -251,10 +251,10 @@ input[type=range]::-webkit-slider-thumb {
 
 
 
-/*-------------------------------------------------wrapper_activeBox----------------------------------------------------*/
+/*-----------------------------------------------wrapper_activeBox/finalBox---------------------------------------------------*/
 
-.wrapper_activeBox {
-    min-height: 90vh;
+.wrapper_activeBox, .wrapper_finalBox {
+    height: 90vh;
     width: 60%;
     background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(2px);
@@ -265,7 +265,7 @@ input[type=range]::-webkit-slider-thumb {
     padding: 20px 30px;
 }
 
-.wrapper_activeBox div {
+.wrapper_activeBox, .wrapper_finalBox div {
     margin: 16px auto;
 }
 
@@ -273,8 +273,9 @@ input[type=range]::-webkit-slider-thumb {
     margin: 0px auto;
     font-size: 20px;
     text-align: center;
-    margin: 20px;
-
+    margin: 22px;
+    font-weight: 800;
+    color: rgb(240, 240, 240);
 }
 
 .wrapper_activeBox .formParRange {
@@ -334,26 +335,14 @@ input[type=range]::-webkit-slider-thumb {
     margin-bottom: 20px;
 }
 
-
-
-
-/*-------------------------------------------------wrapper_finalBox----------------------------------------------------*/
-
-.wrapper_finalBox {
-    min-height: 260px;
-    width: 60%;
-    background-color: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(2px);
-    border-radius: 8px;
-    margin: 80px auto;  
-    border: 1px solid #454545;
-    
-    padding: 4px 20px;
+.wrapper_activeBox .comment {
+    margin-bottom: 0;
+    padding: 0;
+    position: relative;
+    top: 30px;
 }
 
-.wrapper_finalBox div {
-    margin: 16px auto;
-}
+
 
 
 
