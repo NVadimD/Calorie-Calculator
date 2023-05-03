@@ -5,7 +5,7 @@ body {
 }
 
 .header {
-    height: 12vh;
+    height: 10vh;
     padding-top: 20px;
     background-color: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(5px);
@@ -289,6 +289,27 @@ input[type=range]::-webkit-slider-thumb {
 
 
 
+/*-------------------------------------------------wrapper_activeBox----------------------------------------------------*/
+
+.wrapper_activeBox {
+    min-height: 260px;
+    width: 60%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(2px);
+    border-radius: 8px;
+    margin: 80px auto;  
+    border: 1px solid #454545;
+    
+    padding: 4px 20px;
+}
+
+.wrapper_activeBox div {
+    margin: 16px auto;
+}
+
+
+
+
 /*-------------------------------------------------wrapper_finalBox----------------------------------------------------*/
 
 .wrapper_finalBox {
@@ -331,4 +352,13 @@ input[type=range]::-webkit-slider-thumb {
     position: absolute;
     top: 5px;
     left: 26px;
+}
+
+
+
+
+/*----------------------------------------------------Общие классы-----------------------------------------------------------*/
+
+.hide {
+    display: none;
 }
