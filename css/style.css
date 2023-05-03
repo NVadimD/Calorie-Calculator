@@ -102,7 +102,7 @@ body {
 
 .countBox {
 
-    height: 472px;
+    height: 70vh;
     width: 64%;
 
     position: relative;
@@ -133,7 +133,7 @@ body {
 }
 
 .formParRadio {
-    margin: 36px 28px;
+    margin: 40px 28px;
     position: relative;
     cursor: default;
 }
@@ -193,7 +193,7 @@ input[type=range]::-webkit-slider-thumb {
 
 
 .formPar {
-    margin: 32px 28px 40px;
+    margin: 48px 28px;
     position: relative;
 }
 
@@ -257,7 +257,7 @@ input[type=range]::-webkit-slider-thumb {
 
 
 .countButton {
-    margin: 42px auto 0px;
+    margin: 62px auto 0px;
     display: block;
     border: 2px solid #BABABA;
     padding: 10px 20px;
