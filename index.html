@@ -61,9 +61,9 @@
                 </div>
             </div>
         </div>
-        <div class="wrapper_activeBox ">
-            <p>Отлично! Мы рассчитали ваш базовый метаболизм (basal metabolic rate) Это показатель, определяющий, сколько конкретный человек тратит энергии для поддержания жизнедеятельности в пассивном состоянии.</p>
-            <p class="yourBMR">Ваш BMR = <span>2000 ccal</span></p>
+        <div class="wrapper_activeBox hide">
+            <p>Отлично! Мы рассчитали ваш базовый метаболизм (basal metabolic rate). Это показатель, определяющий, сколько конкретный человек тратит энергии для поддержания жизнедеятельности в пассивном состоянии.</p>
+            <p class="yourBMR">Ваш BMR = <span>2000 cal</span></p>
             <p> Для индивидуального расчета необходимо понять сколько вы тратите энергии в течение дня с учетом всей вашей физической и умственной активности. Для этого выставьте селектор физической активности в соответствии с вашем образом жизни: </p>
             <div class="formParRange">
                 <label for="active">Физическая активность</label>
@@ -93,10 +93,79 @@
             <button class="countButton">Рассчитать калораж</button>
             <div class="comment"></div>
         </div>
-        <div class="wrapper_finalBox">
+        <div class="wrapper_purposeBox hide">
             <p>Мы рассчитали сколько калорий ваш организм потребляет ежедневно с учетом индивидуального уровня физической активности.</p>
-            <p class="yourBMR">Ваш активный метаболизм = <span>2000 ccal</span></p>
+            <p class="yourBMR">Ваш активный метаболизм = <span class="activeCal">2000 cal</span></p>
+            <p>Если человек потребляет больше калорий, чем тратит, то организм начинает сохранять избыточные калории в виде жира, что приводит к набору веса. Напротив, если человек потребляет меньше калорий, чем тратит, то организм начинает использовать запасы жира, что приводит к потере веса.</p>
             <p> Выберите вашу цель и мы рассчитаем количество калорий, которое вам нужно употреблять ежедневно, чтобы ее достичь!</p>
+            <div class="formPurposeRadio">
+                <p class="purposeTitle">Выберите вашу цель:</p>
+                <div class="radioBox">
+                    <div class="purposeOption">
+                        <input type="radio" name="purpose" value="lossWeight" id="lossWeight">
+                        <label for="lossWeight">Сбросить лишний вес</label>
+                    </div>
+                    <div class="purposeOption">
+                        <input type="radio" name="purpose" value="saveWeight" id="saveWeight">
+                        <label for="saveWeight">Поддержание формы</label>
+                    </div>
+                    <div class="purposeOption">
+                        <input type="radio" name="purpose" value="gainWeight" id="gainWeight">
+                        <label for="gainWeight">Набор массы</label>
+                    </div>                                      
+                </div>
+            </div>
+            <button class="countButton">Рассчитать калораж</button>
+            <div class="comment"></div>
+        </div>
+        <div class="wrapper_finalBox hide">
+            <div class="support hide">
+                <div class="option_title">
+                    Поддержание формы
+                </div>
+                <div class="purposeCal">
+                    <span class="supportCal">1500</span> cal
+                </div>
+                <p>
+                    Количество калорий, которое потребляет ваш организм с учетом физической активности, которую вы оказали.
+                    Если ваша цель - поддерживать вес, вы должны потреблять примерно столько же калорий, сколько вы тратите. Соответственно, предерживайтесь этой цифры.
+                </p>
+            </div>
+            <div class="deficit hide">
+                <div class="optionDeficit">
+                    <div class="option_title">
+                        Сбалансированное похудение
+                    </div>
+                    <div class="purposeCal">
+                        <span class="deficitMinCal">900</span> cal
+                    </div>
+                    <p>
+                        Количество калорий, которое необходимо потреблять ежедневно, чтобы терять вес в спокойном режиме. Этот вариант является оптимальным для сбалансированного и здорового похудения. Вы вряд ли испытаете сильный стресс, держать такой дефицит не очень сложно. Однако, на быстрый результаты рассчитывать тоже не стоит. В данном случае можно ориентироваться на потерю 1,5 -2,5 кг в месяц.
+                    </p>
+                </div>
+                <div class="optionDeficit">
+                    <div class="option_title">
+                        Быстрое похудение
+                    </div>
+                    <div class="purposeCal">
+                        <span class="deficitMaxCal">700</span> cal
+                    </div>  
+                    <p>
+                        Количество калорий, которое необходимо потреблять ежедневно, чтобы быстро терять вес. Этот вариант удобен, когда нужно быстро сбросить вес, например, за месяц до лета:) Если решите идти по данной программе, обязательно следите за своим самочувствием и отдавайте предпочтение витаминосодержащим продуктам.
+                    </p>
+                </div>
+            </div>
+            <div class="surplus hide">
+                <div class="option_title">
+                    Набор массы
+                </div>
+                <div class="purposeCal">
+                    <span class="surplusCal">2000</span> cal
+                </div>  
+                <p>
+                    Количество калорий, которое необходимо потреблять ежедневно, чтобы максимально быстро и эффективно набирать мышечную массу (работает только в паре с регулярными силовыми тренировками!). Отдавать предпочтение в этой программе следует белкам и комплексным углеводам.
+                </p>
+            </div>
         </div>
     </main>
     <footer class="footer">
