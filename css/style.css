@@ -1,8 +1,10 @@
 body {
-    background-image: url(../img/bg.jpg);
-    background-size: 100%;
-    background-repeat: repeat-y;
+    background-color: #0f0f0f;
     color: #BABABA;
+}
+
+.wrapper {
+    max-width: 1200px;
 }
 
 .header {
@@ -19,10 +21,16 @@ body {
 }
 
 .wrapper_startBox {
+    margin: 0 auto;
     padding: 42px 80px;
 
     display: flex;
     gap: 100px;
+}
+
+.startDisplay, .activityDisplay, .purposeDisplay, .finalDisplay {
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
 }
 
 
@@ -31,15 +39,12 @@ body {
 /*---------------------------------------------------INFOBOX---------------------------------------------------------------*/
 
 .infoBox {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    position: relative;
-
     width: 36%;
     text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     background-color: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(2px);
@@ -49,18 +54,17 @@ body {
 .infoBox p {
     font-size: 18px;
     padding: 20px;
+    margin-bottom: 40px;
 }
 
-.infoBoxTitle {
-    position: absolute;
-    top: 20px;
+.startBox__title {
+    margin: 20px auto 10px;
     font-size: 30px;
+    text-align: center;
 }
 
 .switchesBox {
-    position: absolute;
-    bottom: 20px;
-
+    margin-bottom: 20px;
     display: flex;
     gap: 8px;
     justify-content: center;
@@ -103,8 +107,12 @@ body {
 
 .countBox {
 
-    height: 70vh;
+    min-height: 70vh;
     width: 64%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 
     position: relative;
 
@@ -113,28 +121,20 @@ body {
     border-radius: 8px;    
 }
 
-.countBoxTitle {
-    margin: 20px auto 10px;
-    font-size: 30px;
-    text-align: center;
+.countDisp {
+    margin-top: 10px;
 }
 
-.infoActive {
-    position: absolute;
-    width: 100%;
-    height: 80%;
-    background: rgb(8, 1, 1);
-    z-index: 3;
-    display: none;
+.formDesk {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 44px;
 }
 
-.infoActiveNumber {
-    margin: 10px;
-    padding: 20px 10px;
-}
 
-.formParRadio {
-    margin: 40px 28px;
+.formPar__Radio {
+    margin: 40px 28px 0px;
     position: relative;
     cursor: default;
 }
@@ -165,16 +165,13 @@ body {
 	bottom: 1px;
     z-index: 5;
 }
-
 .radioBox label:hover {
     text-shadow: 3px 3px 8px;
     font-weight: bold;
 }
-
 .radioBox input:not(:first-child) {
     margin-left: 38px;
 }
-
 .radioBox input:checked + label:before {
     background-color: rgb(247, 247, 247);
 }
@@ -194,7 +191,7 @@ input[type=range]::-webkit-slider-thumb {
 
 
 .formPar {
-    margin: 48px 28px;
+    margin: 0px 28px;
     position: relative;
 }
 
