@@ -1,0 +1,165 @@
+
+@media (width < 1060px) {
+    
+    .wrapper_startBox {
+        gap: 26px;
+        padding: 42px 26px
+    }
+
+    .formParRange {
+        display: flex;
+        flex-direction: column;
+    }
+    .formParRange label {
+        position: static;
+    }
+    .formParRange input {
+        position: static;
+        margin-top: 16px;
+        width: 70%;
+    }
+    .activeValue {
+        left: 74%;
+        top: 65%;     
+    }
+
+    .wrapper_activeBox, .wrapper_purposeBox, .wrapper_finalBox {
+        width: 82%;
+    }
+
+}
+
+
+@media (width < 1000px) {
+
+    .wrapper_startBox {
+        flex-direction: column-reverse;
+    }
+    .countBox {
+        width: 80%;
+        margin: 0 auto;
+        min-height: 46vh;
+    }
+    .infoBox {
+        width: 60%;
+        margin: 0 auto;
+        height: 30vh;
+        justify-content: flex-start;
+    }
+    .switchesBox {
+        position: absolute;
+        bottom: 0;
+        left: calc(50% - 23px);
+    }
+
+}
+
+
+@media (width < 768px) {
+
+    .infoBox {
+        display: none;
+    }
+    .countBox {
+        min-height: 72vh;
+    }
+
+    .formDesk {
+        gap: 22px;
+    }
+
+    .countBox .formPar label {
+        position: static;
+        margin-bottom: 8px;
+    }
+
+    .countBox .formPar input {
+        width: 98%;
+    }
+
+    .formPar__Radio {
+        display: flex;
+        flex-direction: column;
+    }
+    .radioBox {
+        width: 96%;
+        margin-top: 10px;
+        margin-left: 18px;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+
+    .countBox .formPar {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+
+@media (width < 600px) {
+    .countBox {
+        width: 100%;;
+    }
+}
+
+
+@media (width < 420px) {
+    .mainTitle {
+        font-size: 34px;
+    }
+    .startBox__title {
+        font-size: 26px;
+        padding: 4px 10px;
+    }
+    .formPar__Radio {
+        margin: 12px 28px 0px
+    }
+    
+    .countBox .countButton {
+        margin: 42px auto 10px;
+    }
+
+    .countBox .comment {
+        position: static;
+    }
+
+    .countDisp {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .wrapper_startBox {
+        padding: 22px 26px;
+    }
+
+    .countBox {
+        min-height: 86vh;
+    }
+
+
+    .wrapper_activeBox, .wrapper_purposeBox, .wrapper_finalBox {
+        height: 96vh;
+        width: 86%;
+    
+        margin: 20px auto;  
+        border: 1px solid #454545;
+        
+        padding: 20px 30px;
+        font-size: 12px;
+    }
+
+    .exampleDesk {
+        padding: 6px;
+        font-size: 8px;
+        color: #848484;
+    }
+    
+    .exampleDesk p {
+        margin: 8px 0;
+    }
+
+}
