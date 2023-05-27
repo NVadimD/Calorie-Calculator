@@ -1,11 +1,3 @@
-/* 
-
-1 - Почти ок (несколько экранов не работают)
-2 - Надо скрывать подсказку
-3 - Уменьшить шрифт
-4 - Уменьшить шрифт
-
-*/
 
 @media (width < 1060px) {
     
@@ -37,6 +29,7 @@
 
 }
 
+
 @media (width < 1000px) {
 
     .wrapper_startBox {
@@ -60,7 +53,6 @@
     }
 
 }
-
 
 
 @media (width < 768px) {
@@ -113,6 +105,7 @@
     }
 }
 
+
 @media (width < 420px) {
     .mainTitle {
         font-size: 34px;
@@ -144,7 +137,29 @@
     }
 
     .countBox {
-        min-height: 78vh;
+        min-height: 86vh;
+    }
+
+
+    .wrapper_activeBox, .wrapper_purposeBox, .wrapper_finalBox {
+        height: 96vh;
+        width: 86%;
+    
+        margin: 20px auto;  
+        border: 1px solid #454545;
+        
+        padding: 20px 30px;
+        font-size: 12px;
+    }
+
+    .exampleDesk {
+        padding: 6px;
+        font-size: 8px;
+        color: #848484;
+    }
+    
+    .exampleDesk p {
+        margin: 8px 0;
     }
 
 }
