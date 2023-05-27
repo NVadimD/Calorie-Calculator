@@ -1,14 +1,20 @@
 body {
-    background-image: url(../img/bg.jpg);
-    background-size: 100%;
-    background-repeat: repeat-y;
+    background-color: #0f0f0f;
     color: #BABABA;
+}
+
+.wrapper {
+    max-width: 1200px;
+}
+
+.wrapper--min {
+    max-width: 1000px;
 }
 
 .header {
     height: 10vh;
     padding-top: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(5px);
 }
 
@@ -19,10 +25,16 @@ body {
 }
 
 .wrapper_startBox {
+    margin: 0 auto;
     padding: 42px 80px;
 
     display: flex;
     gap: 100px;
+}
+
+.startDisplay, .activityDisplay, .purposeDisplay, .finalDisplay {
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
 }
 
 
@@ -31,17 +43,14 @@ body {
 /*---------------------------------------------------INFOBOX---------------------------------------------------------------*/
 
 .infoBox {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    position: relative;
-
     width: 36%;
     text-align: center;
 
-    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(2px);
     border-radius: 8px;
 }
@@ -49,18 +58,17 @@ body {
 .infoBox p {
     font-size: 18px;
     padding: 20px;
+    margin-bottom: 40px;
 }
 
-.infoBoxTitle {
-    position: absolute;
-    top: 20px;
+.startBox__title {
+    margin: 20px auto 10px;
     font-size: 30px;
+    text-align: center;
 }
 
 .switchesBox {
-    position: absolute;
-    bottom: 20px;
-
+    margin-bottom: 20px;
     display: flex;
     gap: 8px;
     justify-content: center;
@@ -103,46 +111,46 @@ body {
 
 .countBox {
 
-    height: 70vh;
+    min-height: 70vh;
     width: 64%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 
     position: relative;
 
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(2px);
     border-radius: 8px;    
 }
 
-.countBoxTitle {
-    margin: 20px auto 10px;
-    font-size: 30px;
-    text-align: center;
+.countDisp {
+    margin-top: 10px;
 }
 
-.infoActive {
-    position: absolute;
-    width: 100%;
-    height: 80%;
-    background: rgb(8, 1, 1);
-    z-index: 3;
-    display: none;
+.formDesk {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 44px;
 }
 
-.infoActiveNumber {
-    margin: 10px;
-    padding: 20px 10px;
-}
 
-.formParRadio {
-    margin: 40px 28px;
+.formPar__Radio {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 28px;
+
+    margin: 40px 28px 0px;
     position: relative;
     cursor: default;
 }
 
 .radioBox {
-    display: inline-block;
-    position: absolute;
-    left: 190px;
+    display: flex;
+    justify-content: flex-start;
+    width: 60%;
 }
 
 .radioBox input {
@@ -165,16 +173,13 @@ body {
 	bottom: 1px;
     z-index: 5;
 }
-
 .radioBox label:hover {
     text-shadow: 3px 3px 8px;
     font-weight: bold;
 }
-
 .radioBox input:not(:first-child) {
     margin-left: 38px;
 }
-
 .radioBox input:checked + label:before {
     background-color: rgb(247, 247, 247);
 }
@@ -194,8 +199,10 @@ input[type=range]::-webkit-slider-thumb {
 
 
 .formPar {
-    margin: 48px 28px;
-    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 28px;
+
 }
 
 .formPar label {
@@ -204,9 +211,7 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 .formPar input {
-    position: absolute;
-    left: 190px;
-    right: 44px;
+    width: 60%;;
     border: 1px solid rgba(170, 169, 169, 0.5);
     border-radius: 6px;
     padding: 4px;
@@ -251,9 +256,9 @@ input[type=range]::-webkit-slider-thumb {
 
 
 
-/*-----------------------------------------------wrapper_activeBox/finalBox---------------------------------------------------*/
+/*--------------------------------------wrapper_activeBox/purposeBox/finalBox------------------------------------------------*/
 
-.wrapper_activeBox, .wrapper_finalBox {
+.wrapper_activeBox, .wrapper_purposeBox, .wrapper_finalBox {
     height: 90vh;
     width: 60%;
     background-color: rgba(0, 0, 0, 0.8);
@@ -263,10 +268,6 @@ input[type=range]::-webkit-slider-thumb {
     border: 1px solid #454545;
     
     padding: 20px 30px;
-}
-
-.wrapper_activeBox, .wrapper_finalBox div {
-    margin: 16px auto;
 }
 
 .yourBMR {
@@ -314,10 +315,9 @@ input[type=range]::-webkit-slider-thumb {
     margin: 0;
     height: 28px;
     width: 28px;
-    cursor: help;
     position: absolute;
     right: 2px;
-    top: -10px;
+    top:  4px;
 }
 
 .exampleDesk {
@@ -339,7 +339,64 @@ input[type=range]::-webkit-slider-thumb {
     margin-bottom: 0;
     padding: 0;
     position: relative;
-    top: 30px;
+    top: 8px;
+}
+
+
+
+
+
+
+
+.wrapper_purposeBox .radioBox {
+    display: block;
+    position: static;
+}
+
+.purposeTitle {
+    font-size: 20px;
+    margin: 40px 0 30px;
+    text-align: center;
+}
+.purposeOption {
+    margin: 20px 0;
+    font-size: 18px;
+}
+.wrapper_purposeBox .yourBMR {
+    margin: 40px 0;
+}
+
+
+
+
+
+
+.wrapper_finalBox p {
+    letter-spacing: 1px;
+}
+
+.deficit {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+/* .optionDeficit {
+    width: 44%;
+} */
+.option_title {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+}
+.purposeCal {
+    font-size: 30px;
+    font-weight: 800;
+    margin: 20px 0;
+    color: rgb(240, 240, 240);
+    text-shadow: 1px 1px 10px;
+    text-align: center;
 }
 
 

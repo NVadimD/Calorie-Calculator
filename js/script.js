@@ -22,7 +22,7 @@ let inputRage = document.querySelector('.inputRage');
 
 activeValue.innerHTML = inputRage.value;
 
-inputRage.onchange = function () {
+inputRage.oninput = function () {
     activeValue.innerHTML = inputRage.value;
 }
 
@@ -30,6 +30,7 @@ inputRage.onchange = function () {
 
 let comment1 = document.querySelector('.countBox .comment');
 let comment2 = document.querySelector('.wrapper_activeBox .comment');
+let comment3 = document.querySelector('.wrapper_purposeBox .comment');
 
 function displayMessage (message) {
     comment1.innerHTML = message;
@@ -37,8 +38,19 @@ function displayMessage (message) {
 
 let activeBox = document.querySelector('.wrapper_activeBox');
 let bmr = document.querySelector('.yourBMR span');
+let purposeBox = document.querySelector('.wrapper_purposeBox');
+let activeCal = document.querySelector('.activeCal');
+let finalBox = document.querySelector('.wrapper_finalBox');
+let supportDiv = document.querySelector('.support');
+let deficitDiv = document.querySelector('.deficit');
+let surplusDiv = document.querySelector('.surplus');
+let supportCal = document.querySelector('.supportCal');
+let deficitMinCal = document.querySelector('.deficitMinCal');
+let deficitMaxCal = document.querySelector('.deficitMaxCal');
+let surplusCal = document.querySelector('.surplusCal');
 
 const gender = document.querySelectorAll('input[name="gender"]');
+const purpose = document.querySelectorAll('input[name="purpose"]');
 let weight = document.querySelector('input[name="weight"]');
 let height = document.querySelector('input[name="height"]');
 let age = document.querySelector('input[name="age"]');
@@ -51,6 +63,7 @@ let calculation = {
     calorazh: undefined,
     coef: undefined,
     activeCalorazh: undefined,
+    purpose: undefined,
     
     checkGender: function () {
         for (const g of gender) {
@@ -116,7 +129,7 @@ let calculation = {
     },
 
     showActiveBox: function () {
-        bmr.innerHTML = `${this.calorazh} ccal`;
+        bmr.innerHTML = `${this.calorazh} cal`;
         activeBox.classList.remove('hide');
         window.scroll ({
             top: activeBox.offsetTop - 24,
@@ -135,8 +148,51 @@ let calculation = {
     },
 
     calculateActiveCalories: function () {
-        this.activeCalorazh = this.calorazh * this.coef;
-        console.log(this.activeCalorazh);
+        this.activeCalorazh = Math.floor(this.calorazh * this.coef);
+        this.showPurposeBox();
+    },
+
+    showPurposeBox: function () {
+        activeCal.innerHTML = `${this.activeCalorazh} cal`;
+        purposeBox.classList.remove('hide');
+        window.scroll ({
+            top: purposeBox.offsetTop - 34,
+            behavior: "smooth"
+        })
+    },
+
+    checkPurpose: function () {
+        for (const p of purpose) {
+            if (p.checked) {
+                this.purpose = p.value;
+                comment3.innerHTML = '';
+                this.showFinalBox();
+                return true;
+            }
+        }
+        if (this.purpose === undefined) {
+            comment3.innerHTML = 'Выберите вашу цель!';
+            return false;
+        } 
+    },
+
+    showFinalBox: function () {        
+        if (this.purpose === 'lossWeight') {
+            deficitMinCal.innerHTML = Math.floor(this.activeCalorazh - (this.activeCalorazh / 100 * 15));
+            deficitMaxCal.innerHTML = Math.floor(this.activeCalorazh - (this.activeCalorazh / 100 * 30));
+            deficitDiv.classList.remove('hide');
+        } else if (this.purpose === 'saveWeight') {
+            supportCal.innerHTML = Math.floor(this.activeCalorazh - (this.activeCalorazh / 100 * 4));
+            supportDiv.classList.remove('hide');
+        } else if (this.purpose === 'gainWeight') {
+            surplusCal.innerHTML = Math.floor(this.activeCalorazh + (this.activeCalorazh / 100 * 15));
+            surplusDiv.classList.remove('hide');
+        }
+        finalBox.classList.remove('hide');
+        window.scroll ({
+            top: finalBox.offsetTop - 44,
+            behavior: 'smooth'
+        })
     }
 
 }
@@ -159,3 +215,12 @@ countButton2.addEventListener ('click', function () {
 })
 
 
+
+let countButton3 = document.querySelector('.wrapper_purposeBox .countButton');
+
+countButton3.addEventListener ('click', function () {
+    supportDiv.classList.add('hide');
+    deficitDiv.classList.add('hide');
+    surplusDiv.classList.add('hide');
+    calculation.checkPurpose();
+})
