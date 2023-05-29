@@ -43,8 +43,9 @@
     .infoBox {
         width: 60%;
         margin: 0 auto;
-        height: 30vh;
+        min-height: 30vh;
         justify-content: flex-start;
+        padding-bottom: 20px;
     }
     .switchesBox {
         position: absolute;
@@ -106,7 +107,7 @@
 }
 
 
-@media (width < 420px) {
+@media (width < 480px) {
     .mainTitle {
         font-size: 34px;
     }
