@@ -36,11 +36,11 @@ function displayMessage (message) {
     comment1.innerHTML = message;
 }
 
-let activeBox = document.querySelector('.wrapper_activeBox');
+let activityDisplay = document.querySelector('.activityDisplay');
 let bmr = document.querySelector('.yourBMR span');
-let purposeBox = document.querySelector('.wrapper_purposeBox');
+let purposeDisplay = document.querySelector('.purposeDisplay');
 let activeCal = document.querySelector('.activeCal');
-let finalBox = document.querySelector('.wrapper_finalBox');
+let finalDisplay = document.querySelector('.finalDisplay');
 let supportDiv = document.querySelector('.support');
 let deficitDiv = document.querySelector('.deficit');
 let surplusDiv = document.querySelector('.surplus');
@@ -130,9 +130,9 @@ let calculation = {
 
     showActiveBox: function () {
         bmr.innerHTML = `${this.calorazh} cal`;
-        activeBox.classList.remove('hide');
+        activityDisplay.classList.remove('hide');
         window.scroll ({
-            top: activeBox.offsetTop - 24,
+            top: activityDisplay.offsetTop - 24,
             behavior: "smooth"
         })
     },
@@ -154,9 +154,9 @@ let calculation = {
 
     showPurposeBox: function () {
         activeCal.innerHTML = `${this.activeCalorazh} cal`;
-        purposeBox.classList.remove('hide');
+        purposeDisplay.classList.remove('hide');
         window.scroll ({
-            top: purposeBox.offsetTop - 34,
+            top: purposeDisplay.offsetTop - 34,
             behavior: "smooth"
         })
     },
@@ -188,9 +188,9 @@ let calculation = {
             surplusCal.innerHTML = Math.floor(this.activeCalorazh + (this.activeCalorazh / 100 * 15));
             surplusDiv.classList.remove('hide');
         }
-        finalBox.classList.remove('hide');
+        finalDisplay.classList.remove('hide');
         window.scroll ({
-            top: finalBox.offsetTop - 44,
+            top: finalDisplay.offsetTop - 44,
             behavior: 'smooth'
         })
     }
