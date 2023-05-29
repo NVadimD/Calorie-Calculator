@@ -132,7 +132,7 @@ let calculation = {
         bmr.innerHTML = `${this.calorazh} cal`;
         activityDisplay.classList.remove('hide');
         window.scroll ({
-            top: activityDisplay.offsetTop - 24,
+            top: activityDisplay.offsetTop - 10,
             behavior: "smooth"
         })
     },
@@ -156,7 +156,7 @@ let calculation = {
         activeCal.innerHTML = `${this.activeCalorazh} cal`;
         purposeDisplay.classList.remove('hide');
         window.scroll ({
-            top: purposeDisplay.offsetTop - 34,
+            top: purposeDisplay.offsetTop - 20,
             behavior: "smooth"
         })
     },
@@ -190,7 +190,7 @@ let calculation = {
         }
         finalDisplay.classList.remove('hide');
         window.scroll ({
-            top: finalDisplay.offsetTop - 44,
+            top: finalDisplay.offsetTop - 14,
             behavior: 'smooth'
         })
     }

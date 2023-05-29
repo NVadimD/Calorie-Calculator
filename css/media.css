@@ -123,9 +123,6 @@
         margin: 42px auto 10px;
     }
 
-    .countBox .comment {
-        position: static;
-    }
 
     .countDisp {
         display: flex;
@@ -151,6 +148,11 @@
         
         padding: 20px 30px;
         font-size: 12px;
+    }
+
+    .wrapper_finalBox {
+        height: 90vh;
+        margin: 0px auto 20px; 
     }
 
     .exampleDesk {
