@@ -36,6 +36,7 @@ body {
 .startDisplay, .activityDisplay, .purposeDisplay, .finalDisplay {
     background-image: url(../img/bg.jpg);
     background-size: cover;
+    min-height: 84vh;
 }
 
 
